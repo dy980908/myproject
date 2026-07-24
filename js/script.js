@@ -318,67 +318,14 @@ import * as THREE from "three";
     scene.add(crystalLight);
 
 
-    /* =======================================================
-       기본 임시 오브젝트
-    ======================================================= */
 
-    const placeholderGeometry =
-      new THREE.IcosahedronGeometry(1.2, 2);
-
-    const position =
-      placeholderGeometry.attributes.position;
-
-    for (
-      let index = 0;
-      index < position.count;
-      index += 1
-    ) {
-      const x = position.getX(index);
-      const y = position.getY(index);
-      const z = position.getZ(index);
-
-      const factor =
-        1 +
-        0.09 *
-          Math.sin(
-            x * 4.1 +
-            y * 3.2 +
-            z * 2.3
-          );
-
-      position.setXYZ(
-        index,
-        x * factor,
-        y * factor,
-        z * factor
-      );
-    }
-
-    placeholderGeometry.computeVertexNormals();
-
-    const placeholderMaterial =
-      new THREE.MeshStandardMaterial({
-        color: 0x1a1a1a,
-        roughness: 0.15,
-        metalness: 0.6
-      });
-
-    const placeholder = new THREE.Mesh(
-      placeholderGeometry,
-      placeholderMaterial
-    );
-
-    placeholder.castShadow = true;
-    placeholder.receiveShadow = true;
-
-    scene.add(placeholder);
 
 
     /* =======================================================
        Viewer 상태
     ======================================================= */
 
-    let activeModel = placeholder;
+   let activeModel = null;
     let uploadedModelBaseY = 0;
     let hasUploadedModel = false;
     let currentObjectUrl = null;
