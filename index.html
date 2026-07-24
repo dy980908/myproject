@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NOWB Archive — A Living Archive" />
+  <title>NOWB Archive</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body data-page="home" data-root="./">
+  <main>
+    <section id="home" class="hero">
+      <h1 class="hero-title first">Design in</h1>
+      <h2 class="hero-title second">Connection</h2>
+
+      <p class="hero-copy">
+        This is a personal archive of things I find worth keeping.<br />
+        Everything here was chosen with intention, not urgency.<br />
+        Browse slowly. Stay as long as you like.
+      </p>
+
+      <div id="hero-viewer" class="viewer hero-viewer" aria-label="Hero 3D viewer">
+        <div class="drop-overlay">
+          <div class="drop-box">
+            <strong>UPLOAD 3D MODEL</strong>
+            <span>Click or drop a .glb / .gltf file</span>
+          </div>
+        </div>
+        <button class="viewer-action" type="button">Replace model</button>
+        <input class="model-input" type="file" accept=".glb,.gltf,model/gltf-binary,model/gltf+json" hidden />
+      </div>
+    </section>
+  </main>
+
+
+  <script src="./js/common.js"></script>
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
