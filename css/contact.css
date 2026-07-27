@@ -1,0 +1,156 @@
+/* CONTACT PAGE */
+
+body[data-page="contact"] main {
+  min-height: 100vh;
+}
+
+.contact {
+  min-height: 100vh;
+  padding: 132px 36px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.7fr);
+  align-items: start;
+  gap: 48px;
+}
+
+.contact-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(64px, 10vw, 160px);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.contact-copy {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.contact-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 0;
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  transition: padding-left 0.3s ease;
+}
+
+.contact-link::after {
+  content: "↗";
+  flex: 0 0 auto;
+  margin-left: 24px;
+  font-size: 0.72em;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+  padding-left: 12px;
+}
+
+.contact-link:hover::after,
+.contact-link:focus-visible::after {
+  transform: translate(4px, -4px);
+}
+
+.contact-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 6px;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding-top: 110px;
+  }
+
+  .contact-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .contact-copy {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .contact {
+    min-height: 100svh;
+    padding: 96px 18px 36px;
+  }
+
+  .contact-title {
+    font-size: clamp(58px, 20vw, 96px);
+  }
+
+  .contact-copy {
+    font-size: 13px;
+  }
+
+  .contact-link {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .contact {
+    padding: 82px 16px 28px;
+  }
+
+  .contact-title {
+    line-height: 0.92;
+  }
+
+  .contact-actions {
+    margin-top: 72px;
+  }
+
+  .contact-link {
+    font-size: 30px;
+  }
+}
+
+@media (hover: none) {
+  .contact-link:hover {
+    padding-left: 0;
+  }
+
+  .contact-link:hover::after {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-link,
+  .contact-link::after {
+    transition: none;
+  }
+}

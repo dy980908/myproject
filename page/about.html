@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About NOWB Archive" />
+  <meta name="description" content="About NOWB Archive — selected object and archive description" />
   <title>About — NOWB Archive</title>
-  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- 전 페이지 공통 CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- About 페이지 전용 CSS -->
+  <link rel="stylesheet" href="../css/about.css" />
+
+  <!-- 프리텐다드 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  
 
   <script type="importmap">
   {
@@ -21,29 +32,38 @@
   <main>
     <section id="about" class="about">
       <div class="about-viewer-wrap">
-        <div id="detail-viewer" class="viewer about-viewer" aria-label="About 3D viewer">
-          <div class="drop-overlay">
-            <div class="drop-box">
-              <strong>UPLOAD 3D MODEL</strong>
-              <span>Click or drop a .glb / .gltf file</span>
-            </div>
-          </div>
-          <button class="viewer-action" type="button">Replace ↗</button>
-          <div class="viewer-hint">Drag to rotate</div>
-          <input class="model-input" type="file" accept=".glb,.gltf,model/gltf-binary,model/gltf+json" hidden />
-        </div>
+        <div id="detail-viewer" class="about-viewer" aria-label="회전 가능한 About 3D 모델"></div>
       </div>
 
       <div class="about-content">
-        <p class="eyebrow">Selected Object</p>
-        <h1 id="about-title" class="about-title"></h1>
-        <p id="about-desc" class="about-desc"></p>
-        <button class="black-button" type="button">＋ ADD TO COLLECTION</button>
+        <p class="eyebrow">About Me</p>
+
+        <h1 class="about-title">
+          연관으로 완성되는 디자인
+        </h1>
+
+<p class="about-desc">
+  서로 다른 생각과 요소를 연관 짓는 시선에서 저의 디자인은 출발합니다.
+  <br>
+  흩어진 정보와 감각을 하나의 흐름으로 엮어, 공감할 수 있는 경험을 만듭니다.
+  <br>
+  이 공간은 연결의 과정을 담아낸 작업물입니다.
+</p>
+
+        <a class="black-button" href="./archive.html">
+          VIEW PROJECT
+        </a>
+
+
       </div>
     </section>
   </main>
 
-  <script src="../js/common.js"></script>
-  <script type="module" src="../js/script.js"></script>
+  <!-- 전 페이지 공통 JS -->
+  <script src="../js/script.js"></script>
+
+  <!-- About 페이지 전용 JS -->
+  <script type="module" src="../js/about.js"></script>
 </body>
+
 </html>

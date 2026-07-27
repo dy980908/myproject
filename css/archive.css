@@ -1,0 +1,259 @@
+/* =========================================================
+   ARCHIVE PAGE
+   공용 style.css 적용을 전제로 한 페이지 전용 스타일
+========================================================= */
+
+/* 상단 고정 내비게이션 높이만큼 본문을 아래로 내립니다. */
+body[data-page="archive"] main {
+  padding-top: 58px;
+}
+
+/* 페이지 전체 영역 */
+.archive {
+  min-height: calc(100vh - 58px);
+  padding: 96px 36px 220px;
+}
+
+/* 페이지 제목 */
+.archive-title {
+  margin-bottom: 48px;
+  font-family: var(--serif);
+  font-size: clamp(36px, 5.2vw, 64px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #F3B5C9;
+}
+
+/* 카드 목록 */
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* 개별 카드 */
+.archive-card {
+  position: relative;
+  min-width: 0;
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+/* 카드 전체를 감싸는 외부 링크 */
+.archive-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 키보드로 이동할 때 포커스 표시 */
+.archive-link:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 6px;
+}
+
+/* 썸네일 영역 */
+.card-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      #e9e9e9,
+      #d7d7d7 58%,
+      #c9c9c9
+    );
+}
+
+/* 공용 img 규칙과 별개로 썸네일 비율을 안정적으로 유지 */
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 이미지 위 어두운 오버레이 */
+.card-image-wrap::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.42);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease;
+}
+
+/* 이미지 중앙 작업물 이름 */
+.card-overlay-title {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+
+  width: calc(100% - 40px);
+   font-family: "Pretendard Variable", Pretendard, sans-serif;
+  color: #fff;
+    font-family: "Pretendard Variable", Pretendard, sans-serif;
+
+  font-size: clamp(20px, 2vw, 30px);
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: -0.025em;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translate(-50%, calc(-50% + 12px));
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* PC 마우스 호버 */
+.archive-link:hover .card-image-wrap::after,
+.archive-link:focus-visible .card-image-wrap::after,
+.archive-link:active .card-image-wrap::after {
+  opacity: 1;
+}
+
+.archive-link:hover .card-overlay-title,
+.archive-link:focus-visible .card-overlay-title,
+.archive-link:active .card-overlay-title {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+/* 이미지 확대 효과 */
+.archive-link:hover .card-image-wrap img,
+.archive-link:focus-visible .card-image-wrap img,
+.archive-link:active .card-image-wrap img {
+  transform: scale(1.08);
+}
+
+
+
+
+/* 카드에 마우스를 올렸을 때 썸네일 확대 */
+.archive-link:hover .card-image-wrap img,
+.archive-link:focus-visible .card-image-wrap img {
+  transform: scale(1.08);
+}
+
+/* 카드 텍스트 영역 */
+.card-body {
+  padding-top: 17px;
+}
+
+/* 카드 제목 */
+.card-title {
+  margin-bottom: 10px;
+
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+/* 카드 설명 */
+.card-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #ddd;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 980px) {
+  .archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 48px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 680px) {
+  .archive {
+    padding-right: 18px;
+    padding-bottom: 120px;
+    padding-left: 18px;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 460px) {
+  body[data-page="archive"] main {
+    padding-top: 54px;
+  }
+
+  .archive {
+    min-height: calc(100svh - 54px);
+    padding: 58px 16px 90px;
+  }
+
+  .archive-title {
+    margin-bottom: 34px;
+    font-size: clamp(38px, 12vw, 50px);
+    line-height: 0.96;
+  }
+
+  .archive-grid {
+    row-gap: 40px;
+  }
+
+  .card-title {
+    font-size: 23px;
+  }
+}
+
+
+
+/* 터치 기기 */
+@media (hover: none) {
+  .archive-link:active .card-image-wrap::after {
+    opacity: 1;
+  }
+
+  .archive-link:active .card-overlay-title {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  .archive-link:active .card-image-wrap img {
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================================================
+   모션 감소 설정 사용자 대응
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .card-image-wrap img {
+    transition: none;
+  }
+}

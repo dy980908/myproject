@@ -6,16 +6,14 @@
   <meta name="description" content="Contact NOWB Archive" />
   <title>Contact — NOWB Archive</title>
 
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
 
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.182.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.182.0/examples/jsm/"
-    }
-  }
-  </script>
+  <!-- 프리텐다드 -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+
+  
 </head>
 
 <body data-page="contact" data-root="../">
@@ -23,6 +21,7 @@
     <section id="contact" class="contact">
       <div class="contact-top">
         <h1 class="contact-title">Get in Touch</h1>
+
         <p class="contact-copy">
           Interested in collaboration?<br />
           We'd love to hear from you.
@@ -31,39 +30,28 @@
 
       <div class="contact-actions">
         <div class="contact-group">
-          <button id="instagram-link" class="contact-link" type="button">
-            Instagram ↗
-          </button>
-
-          <button
-            class="edit-link"
-            type="button"
-            data-edit="instagram"
-            aria-label="Instagram 링크 수정"
+          <a
+            class="contact-link"
+            href="https://www.instagram.com/your-account"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            ✎
-          </button>
+            Instagram
+          </a>
         </div>
 
         <div class="contact-group">
-          <button id="email-link" class="contact-link" type="button">
-            Email ↗
-          </button>
-
-          <button
-            class="edit-link"
-            type="button"
-            data-edit="email"
-            aria-label="이메일 링크 수정"
+          <a
+            class="contact-link"
+            href="mailto:your-email@example.com"
           >
-            ✎
-          </button>
+            Email
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="../js/common.js"></script>
-  <script type="module" src="../js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

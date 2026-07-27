@@ -1,0 +1,205 @@
+/* =========================================================
+   메인 페이지 화면 고정 구조
+========================================================= */
+body[data-page="home"] {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body[data-page="home"] main {
+  flex: 0 0 calc(100dvh - 48px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+body[data-page="home"] .footer {
+  flex: 0 0 48px;
+  height: 48px;
+}
+
+/* =========================================================
+   히어로
+========================================================= */
+.hero {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.hero-title {
+  position: absolute;
+  z-index: 2;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: clamp(90px, 17vw, 260px);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-title--first {
+  top: 10%;
+  left: var(--page-padding);
+
+}
+
+.hero-title--second {
+  right: var(--page-padding);
+  bottom: 14%;
+
+}
+
+.hero-copy {
+  position: absolute;
+  z-index: 7;
+  bottom: 72px;
+  left: var(--page-padding);
+  max-width: 390px;
+  color: var(--muted-text);
+  font-size: 20px;
+  line-height: 1.7;
+  pointer-events: none;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif;
+}
+
+.hero-copy span{
+  color:#F3B5C9;
+  font-weight:600;
+}
+
+/* =========================================================
+   3D 뷰어
+========================================================= */
+.hero-viewer {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-viewer canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: pan-y;
+}
+
+
+.viewer-message {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  left: 50%;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  background: rgba(17, 17, 17, 0.72);
+  color: var(--muted-text);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.viewer-message[hidden] {
+  display: none;
+}
+
+/* =========================================================
+   반응형
+========================================================= */
+@media (max-width: 1400px) {
+  .hero-viewer {
+    top: 5%;
+    bottom: 5%;
+    height: auto;
+  }
+}
+
+/* 1200px 이하 */
+@media (max-width: 1200px) {
+  .hero-viewer {
+    top: 8%;
+    bottom: 8%;
+  }
+}
+
+/* 750px 이하 */
+@media (max-width: 750px) {
+  .hero-viewer {
+    top: 12%;
+    bottom: 12%;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-viewer {
+    top: 16%;
+    bottom: 16%;
+  }
+  .hero-title--first {
+    top: 20%;
+  }
+
+  .hero-title--second {
+    bottom: 24%;
+  }
+
+  .hero-copy {
+    bottom: 72px;
+    max-width: 280px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+    .hero-viewer {
+    top: 20%;
+    bottom: 20%;
+  }
+  .hero-title {
+    font-size: clamp(58px, 19vw, 82px);
+    line-height: 0.83;
+    letter-spacing: -0.045em;
+  }
+
+  .hero-title--first {
+    top: 25%;
+  }
+
+  .hero-title--second {
+    bottom: 28%;
+  }
+
+  .hero-copy {
+    bottom: 42px;
+    max-width: calc(100% - (var(--page-padding) * 2));
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+@media (max-width: 380px) {
+  .hero-viewer {
+    top: 23%;
+    bottom: 23%;
+  }
+    .hero-title--first {
+    top: 35%;
+  }
+
+  .hero-title--second {
+    bottom: 34%;
+  }
+    .hero-copy {
+      font-size: 11px;
+    }
+}

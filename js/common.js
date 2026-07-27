@@ -26,7 +26,9 @@ function createCommonLayout() {
       <span></span>
     </button>
 
-    <a class="logo" href="${rootPath}index.html" aria-label="NOWB 홈">NOWB</a>
+     <a class="logo" href="${rootPath}index.html" aria-label="홈으로 이동">
+        <img src="${rootPath}public/images/logo.png" alt="logo" />
+      </a>
 
     <ul id="nav-menu" class="nav-menu">
       ${menuItems.map((item) => `
@@ -44,7 +46,7 @@ function createCommonLayout() {
   `;
 
   const footer = document.createElement("footer");
-  footer.textContent = "© 2026 NOWB. ALL RIGHTS RESERVED.";
+  footer.textContent = "© 2026 portfolio. ALL RIGHTS RESERVED.";
 
   document.body.prepend(nav);
   document.body.append(footer);
