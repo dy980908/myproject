@@ -99,6 +99,10 @@
     });
   }
 
+
+  function initProjectTools() { const tools = document.querySelector(".project-tools"); if (!tools) { return; } const topButton = tools.querySelector("[data-scroll-top]"); let lastScrollY = window.scrollY; function scrollToTop() { window.scrollTo({ top: 0, behavior: "smooth" }); } function updateTopButton() { if (!topButton) { return; } const shouldHide = window.scrollY < 160; topButton.classList.toggle( "is-hidden", shouldHide ); } topButton?.addEventListener( "click", scrollToTop ); window.addEventListener( "scroll", () => { lastScrollY = window.scrollY; updateTopButton(); }, { passive: true } ); updateTopButton(); } function initCommonLayout() { createNavigation(); createFooter(); initProjectTools(); }
+
+  
   function initCommonLayout() {
     createNavigation();
     createFooter();
