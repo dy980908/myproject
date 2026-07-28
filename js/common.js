@@ -29,8 +29,8 @@
       href: `${rootPath}page/about.html`
     },
     {
-      key: "archive",
-      label: "ARCHIVE",
+      key: "PROJECTS",
+      label: "PROJECTS",
       href: `${rootPath}page/archive.html`
     },
     {
