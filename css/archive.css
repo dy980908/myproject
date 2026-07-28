@@ -152,6 +152,7 @@ body[data-page="archive"] main {
 /* 카드 텍스트 영역 */
 .card-body {
   padding-top: 17px;
+   transition: color 0.4s ease;
 }
 
 /* 카드 제목 */
@@ -170,7 +171,20 @@ body[data-page="archive"] main {
   color: #ddd;
 }
 
+.card-title,
+.card-desc {
+  transition: color 0.4s ease;
+}
 
+.archive-link:hover .card-title,
+.archive-link:focus-visible .card-title {
+  color: #F3B5C9;
+}
+
+.archive-link:hover .card-desc,
+.archive-link:focus-visible .card-desc {
+  color: #dcafbebf;
+}
 /* =========================================================
    TABLET
 ========================================================= */
