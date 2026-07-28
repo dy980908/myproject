@@ -1,108 +1,156 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="description"
-    content="프로젝트 상세 페이지"
-  />
+  <meta name="description" content="이루다 리브랜딩 프로젝트 상세 페이지" />
 
-  <title>프로젝트 상세 페이지</title>
+  <title>이루다 리브랜딩 프로젝트 상세 페이지</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../public/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../public/images/favicon.svg">
 
   <!-- 공용 스타일 -->
-  <link
-    rel="stylesheet"
-    href="../css/style.css"
-  />
+  <link rel="stylesheet" href="../css/style.css" />
 
   <!-- 프로젝트 상세페이지 전용 스타일 -->
-  <link
-    rel="stylesheet"
-    href="../css/project.css"
-  />
+  <link rel="stylesheet" href="../css/project.css" />
 </head>
 
-<body
-  data-page="archive" data-root="../" data-project-page>
-<main class="project-detail">
+<body data-page="archive" data-root="../" data-project-page>
+  <main class="project-detail">
 
-  <section id="project-top" class="project-layout">
+    <section id="project-top" class="project-layout">
 
-    <!-- 왼쪽 고정 설명 영역 -->
-    <aside class="project-info">
-      <div class="project-info__sticky">
+      <!-- 왼쪽 고정 설명 영역 -->
+      <aside class="project-info">
+        <div class="project-info__sticky">
 
-        <p class="project-eyebrow">
-         BRANDING / VIDEO / DIGITAL · 2026
-        </p>
+          <p class="project-eyebrow">
+            BRANDING / VIDEO / DIGITAL · 2026
+          </p>
 
-        <h1 class="project-title">
-          이루다한의원
-        </h1>
+          <h1 class="project-title">
+            이루다한의원
+          </h1>
 
-        <p class="project-intro">
-         문신 제거 전문 한의원의 브랜드를 리브랜딩하고, 신뢰감 있는 비주얼을 중심으로 아이덴티티와 히어로 영상을 구축한 프로젝트입니다.
-        </p>
+          <p class="project-intro">
+            문신 제거 전문 한의원의 브랜드를 리브랜딩하고, 신뢰감 있는 비주얼을 중심으로 아이덴티티와 히어로 영상을 구축한 프로젝트입니다.
+          </p>
 
-        <dl class="project-meta">
-          <div>
-            <dt>ROLE</dt>
-            <dd>
-              Website Hero Video Production, Brand Design, Visual & Concept Direction
-            </dd>
-          </div>
+          <dl class="project-meta">
+            <div>
+              <dt>ROLE</dt>
 
-          <div>
-            <dt>TOOLS</dt>
-            <dd>
-              Figma, Adobe Photoshop, Adobe After Effects, Adobe Premiere Pro, AI Video Tools (Kling 3.0)
-            </dd>
-          </div>
+              <dd>
+                Website Hero Video Production, Brand Design, Visual & Concept Direction
+              </dd>
+            </div>
 
-          <div>
-            <dt>YEAR</dt>
-            <dd>2026</dd>
-          </div>
-        </dl>
+            <div>
+              <dt>TOOLS</dt>
 
-        <!-- <a
-          class="black-button project-info__button"
-          href="https://dy980908.github.io/project01/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT WEBSITE
-        </a> -->
+              <dd>
+                Figma, Adobe Photoshop, Adobe After Effects, Adobe Premiere Pro, AI Video Tools (Kling 3.0)
+              </dd>
+            </div>
 
+            <div>
+              <dt>YEAR</dt>
+
+              <dd>
+                2026
+              </dd>
+            </div>
+          </dl>
+
+          <!-- 데스크톱 전용 프로젝트 버튼 -->
+          <nav class="project-info-tools" aria-label="프로젝트 페이지 도구">
+            <!-- 프로젝트 목록으로 이동 -->
+            <a class="project-info-tool" href="https://dy980908.github.io/myproject/page/archive.html">
+              <span class="project-info-tool__number">
+                ←
+              </span>
+
+              <span class="project-info-tool__label">
+                PROJECT
+              </span>
+
+              <span class="project-info-tool__arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+
+            <!-- 히어로 -->
+            <a class="project-info-tool" href="https://dy980908.github.io/iruda-main/" target="_blank"
+              rel="noopener noreferrer">
+              <span class="project-info-tool__number">
+                01
+              </span>
+
+              <span class="project-info-tool__label">
+                PREVIEW
+              </span>
+
+              <span class="project-info-tool__arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+
+            <!-- 안내책자 -->
+            <a class="project-info-tool" href="https://dy980908.github.io/iruda-ebook/" target="_blank"
+              rel="noopener noreferrer">
+              <span class="project-info-tool__number">
+                02
+              </span>
+
+              <span class="project-info-tool__label">
+                BOOK
+              </span>
+
+              <span class="project-info-tool__arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+
+            <!-- 페이지 상단 -->
+            <a class="project-info-tool" href="#project-top">
+              <span class="project-info-tool__number">
+                ↑
+              </span>
+
+              <span class="project-info-tool__label">
+                TOP
+              </span>
+
+              <span class="project-info-tool__arrow" aria-hidden="true">
+                ↑
+              </span>
+            </a>
+          </nav>
+
+        </div>
+      </aside>
+
+      <!-- 오른쪽 긴 상세페이지 이미지 -->
+      <div class="project-content">
+        <img class="project-content__image" src="../public/images/project02.jpg" alt="이루다한의원 프로젝트 상세페이지" />
       </div>
-    </aside>
 
-    <!-- 오른쪽 긴 상세페이지 이미지 -->
-    <div class="project-content">
-      <img
-        class="project-content__image"
-        src="../public/images/project02.jpg"
-        alt="이루다 리브랜딩 상세페이지"
-      />
-    </div>
+    </section>
 
-  </section>
-
-</main>
+  </main>
 
 
   <nav class="project-tools" aria-label="프로젝트 페이지 도구">
-    <a class="project-tool project-tool--back"
-      href="./archive.html" aria-label="프로젝트로 돌아가기"
-    >
-      <span class="project-tool__icon"
-        aria-hidden="true">
+    <a class="project-tool project-tool--back" href="https://dy980908.github.io/myproject/page/archive.html"
+      aria-label="프로젝트로 돌아가기">
+      <span class="project-tool__icon" aria-hidden="true">
         ←
       </span>
 
@@ -111,15 +159,9 @@
       </span>
     </a>
 
-    <div
-      class="project-tool-group"
-      aria-label="다른 프로젝트"
-    >
-      <a
-        class="project-tool project-tool--project"
-        href="https://dy980908.github.io/iruda-main/" target="_blank"
-        aria-label="히어로영상"
-      >
+    <div class="project-tool-group" aria-label="다른 프로젝트">
+      <a class="project-tool project-tool--project" href="https://dy980908.github.io/iruda-main/" target="_blank"
+        rel="noopener noreferrer" aria-label="히어로">
         <span class="project-tool__index">
           01
         </span>
@@ -129,11 +171,8 @@
         </span>
       </a>
 
-      <a
-        class="project-tool project-tool--project"
-        href="https://dy980908.github.io/iruda-ebook/" target="_blank"
-        aria-label="안내책자"
-      >
+      <a class="project-tool project-tool--project" href="https://dy980908.github.io/iruda-ebook/" target="_blank"
+        rel="noopener noreferrer" aria-label="안내책자">
         <span class="project-tool__index">
           02
         </span>
@@ -144,16 +183,8 @@
       </a>
     </div>
 
-    <button
-      class="project-tool project-tool--top"
-      type="button"
-      data-scroll-top
-      aria-label="페이지 맨 위로 이동"
-    >
-      <span
-        class="project-tool__icon"
-        aria-hidden="true"
-      >
+    <button class="project-tool project-tool--top" type="button" data-scroll-top aria-label="페이지 맨 위로 이동">
+      <span class="project-tool__icon" aria-hidden="true">
         ↑
       </span>
 
@@ -164,29 +195,26 @@
   </nav>
 
   <!-- 공용 JS -->
-  <script
-    type="module"
-    src="../js/script.js"></script>
-  <script
-    type="module"
-    src="../js/common.js"></script>
+  <script type="module" src="../js/script.js"></script>
+  <script type="module" src="../js/common.js"></script>
 
 
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const topButton = document.querySelector("[data-scroll-top]");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const topButton = document.querySelector("[data-scroll-top]");
 
-  if (!topButton) return;
+      if (!topButton) return;
 
-  topButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+      topButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
     });
-  });
-});
-</script>
+  </script>
 
-<!-- top -->
+  <!-- top -->
 </body>
+
 </html>

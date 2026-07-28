@@ -1,107 +1,127 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="description"
-    content="프로젝트 상세 페이지"
-  />
+  <meta name="description" content="나올의원 프로모션 상세 페이지" />
 
-  <title>프로젝트 상세 페이지</title>
+  <title>나올의원 프로모션 상세 페이지</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../public/images/favicon.svg">
+  <link rel="apple-touch-icon" href="../public/images/favicon.svg">
+
+
+
 
   <!-- 공용 스타일 -->
-  <link
-    rel="stylesheet"
-    href="../css/style.css"
-  />
+  <link rel="stylesheet" href="../css/style.css" />
 
   <!-- 프로젝트 상세페이지 전용 스타일 -->
-  <link
-    rel="stylesheet"
-    href="../css/project.css"
-  />
+  <link rel="stylesheet" href="../css/project.css" />
 </head>
 
-<body
-  data-page="archive" data-root="../" data-project-page>
-<main class="project-detail">
+<body data-page="archive" data-root="../" data-project-page>
+  <main class="project-detail">
 
-  <section id="project-top" class="project-layout">
+    <section id="project-top" class="project-layout">
 
-    <!-- 왼쪽 고정 설명 영역 -->
-    <aside class="project-info">
-      <div class="project-info__sticky">
+      <!-- 왼쪽 고정 설명 영역 -->
+      <aside class="project-info">
+        <div class="project-info__sticky">
 
-        <p class="project-eyebrow">
-         PROMOTION / CONTENT DESIGN · 2026
-        </p>
+          <p class="project-eyebrow">
+            PROMOTION / CONTENT DESIGN · 2026
+          </p>
 
-        <h1 class="project-title">
-          나올의원
-        </h1>
+          <h1 class="project-title">
+            나올의원
+          </h1>
 
-        <p class="project-intro">
-        피부과 프로모션 콘텐츠의 비주얼 완성도를 높이기 위해 상세페이지와 팝업 이미지를 중심으로 구성한 프로젝트입니다.
-        </p>
+          <p class="project-intro">
+            피부과 프로모션 콘텐츠의 비주얼 완성도를 높이기 위해 상세페이지와 팝업 이미지를 중심으로 구성한 프로젝트입니다.
+          </p>
 
-        <dl class="project-meta">
-          <div>
-            <dt>ROLE</dt>
-            <dd>
-             Detail Page Design, Popup Design, Visual Design
-            </dd>
-          </div>
+          <dl class="project-meta">
+            <div>
+              <dt>ROLE</dt>
 
-          <div>
-            <dt>TOOLS</dt>
-            <dd>
-             Adobe Photoshop, Figma, AI Tools, Imweb
-          </div>
+              <dd>
+                Detail Page Design, Popup Design, Visual Design
+              </dd>
+            </div>
 
-          <div>
-            <dt>YEAR</dt>
-            <dd>2026</dd>
-          </div>
-        </dl>
+            <div>
+              <dt>TOOLS</dt>
 
-        <!-- <a
-          class="black-button project-info__button"
-          href="https://dy980908.github.io/project01/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          VISIT WEBSITE
-        </a> -->
+              <dd>
+                Adobe Photoshop, Figma, AI Tools, Imweb
+              </dd>
+            </div>
 
+            <div>
+              <dt>YEAR</dt>
+
+              <dd>
+                2026
+              </dd>
+            </div>
+          </dl>
+
+          <!-- 데스크톱 전용 프로젝트 버튼 -->
+          <nav class="project-info-tools" aria-label="프로젝트 페이지 도구">
+            <!-- 프로젝트 목록으로 이동 -->
+            <a class="project-info-tool" href="https://dy980908.github.io/myproject/page/archive.html">
+              <span class="project-info-tool__number">
+                ←
+              </span>
+
+              <span class="project-info-tool__label">
+                PROJECT
+              </span>
+
+              <span class="project-info-tool__arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+
+            <!-- 페이지 상단 -->
+            <a class="project-info-tool" href="#project-top">
+              <span class="project-info-tool__number">
+                ↑
+              </span>
+
+              <span class="project-info-tool__label">
+                TOP
+              </span>
+
+              <span class="project-info-tool__arrow" aria-hidden="true">
+                ↑
+              </span>
+            </a>
+          </nav>
+
+        </div>
+      </aside>
+
+      <!-- 오른쪽 긴 상세페이지 이미지 -->
+      <div class="project-content">
+        <img class="project-content__image" src="../public/images/project03.jpg" alt="나올의원 프로모션 상세페이지" />
       </div>
-    </aside>
 
-    <!-- 오른쪽 긴 상세페이지 이미지 -->
-    <div class="project-content">
-      <img
-        class="project-content__image"
-        src="../public/images/project03.jpg"
-        alt="나올의원 프로모션 상세페이지"
-      />
-    </div>
+    </section>
 
-  </section>
-
-</main>
+  </main>
 
 
   <nav class="project-tools" aria-label="프로젝트 페이지 도구">
-    <a class="project-tool project-tool--back"
-      href="./archive.html" aria-label="프로젝트로 돌아가기"
-    >
-      <span class="project-tool__icon"
-        aria-hidden="true">
+    <a class="project-tool project-tool--back" href="https://dy980908.github.io/myproject/page/archive.html"
+      aria-label="프로젝트로 돌아가기">
+      <span class="project-tool__icon" aria-hidden="true">
         ←
       </span>
 
@@ -110,16 +130,8 @@
       </span>
     </a>
 
-    <button
-      class="project-tool project-tool--top"
-      type="button"
-      data-scroll-top
-      aria-label="페이지 맨 위로 이동"
-    >
-      <span
-        class="project-tool__icon"
-        aria-hidden="true"
-      >
+    <button class="project-tool project-tool--top" type="button" data-scroll-top aria-label="페이지 맨 위로 이동">
+      <span class="project-tool__icon" aria-hidden="true">
         ↑
       </span>
 
@@ -130,29 +142,26 @@
   </nav>
 
   <!-- 공용 JS -->
-  <script
-    type="module"
-    src="../js/script.js"></script>
-  <script
-    type="module"
-    src="../js/common.js"></script>
+  <script type="module" src="../js/script.js"></script>
+  <script type="module" src="../js/common.js"></script>
 
 
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const topButton = document.querySelector("[data-scroll-top]");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const topButton = document.querySelector("[data-scroll-top]");
 
-  if (!topButton) return;
+      if (!topButton) return;
 
-  topButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+      topButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
     });
-  });
-});
-</script>
+  </script>
 
-<!-- top -->
+  <!-- top -->
 </body>
+
 </html>
