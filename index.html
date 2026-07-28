@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Design in Connection — personal portfolio archive"
-  />
+  <meta name="description" content="Design in Connection — personal portfolio" />
   <title>Design in Connection</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="./public/images/favicon.svg">
+  <link rel="apple-touch-icon" href="./public/images/favicon.svg">
+
+
 
   <!-- 전 페이지 공통 CSS -->
   <link rel="stylesheet" href="./css/style.css" />
@@ -16,7 +21,8 @@
   <link rel="stylesheet" href="./css/main.css" />
 
   <!-- 프리텐다드 -->
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 
   <!-- Three.js 모듈 경로 -->
   <script type="importmap">
@@ -40,19 +46,18 @@
         <br>디자이너 <span>김다연</span>입니다
       </p>
 
-      <div
-        id="hero-viewer"
-        class="hero-viewer"
-        aria-label="회전 가능한 3D 모델"
-      ></div>
+      <div id="hero-viewer" class="hero-viewer" aria-label="회전 가능한 3D 모델"></div>
     </section>
   </main>
 
-  <!-- 전 페이지 공통 JS -->
-  <script src="./js/script.js"></script>
+  <!-- 공용 레이아웃: nav, footer, 모바일 메뉴 -->
   <script src="./js/common.js"></script>
 
-  <!-- 메인 페이지 전용 JS -->
+  <!-- 공용 보조 기능 -->
+  <script src="./js/script.js"></script>
+
+  <!-- 메인 페이지 전용 Three.js -->
   <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
