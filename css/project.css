@@ -14,6 +14,7 @@ body[data-project-page] main {
   width: 100%;
 }
 
+
 /* =========================================================
    왼쪽 설명 + 오른쪽 상세페이지
 ========================================================= */
@@ -22,21 +23,27 @@ body[data-project-page] main {
   width: 100%;
 
   display: grid;
+
   grid-template-columns:
     minmax(300px, 32vw)
     minmax(0, 1fr);
 
-  /* 기존 align-items: start; 삭제 */
   align-items: stretch;
 
   border-bottom: 1px solid var(--line);
 }
+
+
+/* =========================================================
+   왼쪽 프로젝트 설명 영역
+========================================================= */
 
 .project-info {
   position: relative;
   align-self: stretch;
 
   min-width: 0;
+
   padding:
     clamp(70px, 7vw, 120px)
     clamp(30px, 5vw, 80px);
@@ -46,13 +53,20 @@ body[data-project-page] main {
 
 .project-info__sticky {
   position: sticky;
+
   top: calc(var(--nav-height) + 40px);
 
+  width: 100%;
   max-width: 520px;
 }
 
+
+/* =========================================================
+   프로젝트 기본 정보
+========================================================= */
+
 .project-eyebrow {
-  margin-bottom: 24px;
+  margin: 0 0 24px;
 
   color: rgba(255, 255, 255, 0.42);
 
@@ -63,7 +77,7 @@ body[data-project-page] main {
 }
 
 .project-title {
-  margin-bottom: 36px;
+  margin: 0 0 36px;
 
   color: #f3b5c9;
 
@@ -82,7 +96,8 @@ body[data-project-page] main {
 
 .project-intro {
   max-width: 460px;
-  margin-bottom: 54px;
+
+  margin: 0 0 54px;
 
   color: var(--muted-text);
 
@@ -95,11 +110,17 @@ body[data-project-page] main {
 .project-meta {
   display: grid;
   gap: 18px;
+
+  margin: 0;
 }
 
 .project-meta > div {
   display: grid;
-  grid-template-columns: 74px minmax(0, 1fr);
+
+  grid-template-columns:
+    74px
+    minmax(0, 1fr);
+
   gap: 18px;
 }
 
@@ -120,9 +141,142 @@ body[data-project-page] main {
   line-height: 1.6;
 }
 
-.project-info__button {
-  margin-top: 40px;
+
+/* =========================================================
+   데스크톱 왼쪽 프로젝트 버튼
+========================================================= */
+
+.project-info-tools {
+  width: 100%;
+
+  display: grid;
+
+  margin-top: clamp(44px, 5vw, 76px);
+
+  border-top: 1px solid var(--line);
 }
+
+.project-info-tool {
+  position: relative;
+
+  width: 100%;
+  min-height: 62px;
+
+  display: grid;
+
+  grid-template-columns:
+    42px
+    minmax(0, 1fr)
+    24px;
+
+  align-items: center;
+  gap: 12px;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid var(--line);
+
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    sans-serif;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    padding-left 220ms ease;
+}
+
+.project-info-tool::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition: transform 260ms ease;
+
+  pointer-events: none;
+}
+
+.project-info-tool:hover::before,
+.project-info-tool:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.project-info-tool:hover,
+.project-info-tool:focus-visible {
+  color: #ffffff;
+
+  padding-left: 24px;
+}
+
+.project-info-tool:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.65);
+  outline-offset: -1px;
+}
+
+.project-info-tool__number,
+.project-info-tool__label,
+.project-info-tool__arrow {
+  position: relative;
+  z-index: 1;
+}
+
+.project-info-tool__number {
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.project-info-tool__label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.project-info-tool__arrow {
+  justify-self: end;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 13px;
+
+  transition:
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.project-info-tool:hover .project-info-tool__arrow,
+.project-info-tool:focus-visible .project-info-tool__arrow {
+  color: #ffffff;
+
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   데스크톱에서는 기존 하단 도구 버튼 숨김
+========================================================= */
+
+body[data-project-page] > .project-tools {
+  display: none;
+}
+
 
 /* =========================================================
    오른쪽 긴 상세페이지 이미지
@@ -130,6 +284,7 @@ body[data-project-page] main {
 
 .project-content {
   min-width: 0;
+
   padding:
     clamp(30px, 4vw, 70px)
     clamp(20px, 4vw, 70px);
@@ -147,6 +302,7 @@ body[data-project-page] main {
 
   background: #181818;
 }
+
 
 /* =========================================================
    태블릿
@@ -170,8 +326,26 @@ body[data-project-page] main {
   }
 
   .project-meta > div {
-    grid-template-columns: 60px minmax(0, 1fr);
+    grid-template-columns:
+      60px
+      minmax(0, 1fr);
+
     gap: 12px;
+  }
+
+  .project-info-tools {
+    margin-top: 48px;
+  }
+
+  .project-info-tool {
+    min-height: 56px;
+
+    grid-template-columns:
+      36px
+      minmax(0, 1fr)
+      20px;
+
+    padding: 0 14px;
   }
 }
 
@@ -180,10 +354,23 @@ body[data-project-page] main {
 ========================================================= */
 
 @media (max-width: 760px) {
+  /*
+   * 하단 고정 버튼 높이만큼 본문 여백 확보
+   */
+  body[data-project-page] {
+    padding-bottom: 68px;
+  }
+
+  /*
+   * 모바일에서는 2단 레이아웃 해제
+   */
   .project-layout {
     display: block;
   }
 
+  /*
+   * 모바일 프로젝트 설명 영역
+   */
   .project-info {
     padding:
       70px
@@ -194,9 +381,13 @@ body[data-project-page] main {
     border-bottom: 1px solid var(--line);
   }
 
-  /* 모바일에서는 고정 해제 */
+  /*
+   * 모바일에서는 sticky 해제
+   */
   .project-info__sticky {
     position: static;
+
+    width: 100%;
     max-width: 620px;
   }
 
@@ -212,6 +403,16 @@ body[data-project-page] main {
     font-size: 13px;
   }
 
+  /*
+   * 데스크톱용 왼쪽 버튼 숨김
+   */
+  .project-info-tools {
+    display: none;
+  }
+
+  /*
+   * 상세 이미지 모바일 여백 제거
+   */
   .project-content {
     padding: 0;
   }
@@ -219,24 +420,300 @@ body[data-project-page] main {
   .project-content__image {
     width: 100%;
   }
-}
 
-/* =========================================================
-   작은 모바일
-========================================================= */
 
-@media (max-width: 460px) {
-  .project-info {
-    padding-top: 56px;
-    padding-bottom: 48px;
+  /* =======================================================
+     모바일 하단 고정 메뉴
+  ======================================================= */
+
+  body[data-project-page] > .project-tools {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+    height: 68px;
+
+    display: grid;
+
+    grid-template-columns:
+      72px
+      minmax(0, 1fr)
+      58px;
+
+    gap: 0;
+
+    padding: 0;
+    margin: 0;
+
+    border-top: 1px solid var(--line);
+
+    background: var(--background);
+
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
-  .project-title {
-    font-size: 42px;
+  /*
+   * 가운데 WEBSITE, CONTENTS 버튼 그룹
+   */
+  body[data-project-page]
+  > .project-tools
+  .project-tool-group {
+    width: 100%;
+    min-width: 0;
+    height: 68px;
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 0;
+
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
   }
 
-  .project-meta > div {
-    grid-template-columns: 1fr;
-    gap: 6px;
+  /*
+   * 모바일 하단 버튼 공통
+   */
+  body[data-project-page]
+  > .project-tools
+  .project-tool {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+    height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+
+    padding: 6px 4px;
+    margin: 0;
+
+    border: 0;
+    border-right: 1px solid var(--line);
+    border-radius: 0;
+
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.78);
+
+    font-family:
+      "Pretendard Variable",
+      Pretendard,
+      sans-serif;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+
+    overflow: hidden;
+    transform: none;
+
+    transition:
+      background-color 180ms ease,
+      color 180ms ease;
+  }
+
+  /*
+   * 기존 공용 CSS의 가상 요소 효과 제거
+   */
+  body[data-project-page]
+  > .project-tools
+  .project-tool::before,
+  body[data-project-page]
+  > .project-tools
+  .project-tool::after {
+    content: none;
+
+    display: none;
+  }
+
+
+  /* =======================================================
+     PROJECT 버튼
+  ======================================================= */
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--back {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--back
+  .project-tool__icon {
+    display: block;
+
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--back
+  .project-tool__label {
+    display: block;
+
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     WEBSITE, CONTENTS 버튼
+  ======================================================= */
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--project {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--project
+  .project-tool__index {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
+
+    transition: color 180ms ease;
+  }
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--project
+  .project-tool__label {
+    display: block;
+
+    max-width: 100%;
+
+    color: inherit;
+
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.03em;
+
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+
+  /* =======================================================
+     TOP 버튼
+  ======================================================= */
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--top {
+    flex-direction: column;
+    gap: 4px;
+
+    border-right: 0;
+
+    cursor: pointer;
+  }
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--top
+  .project-tool__icon {
+    display: block;
+
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool--top
+  .project-tool__label {
+    display: block;
+
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.04em;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     모바일 버튼 호버
+     선 색상 유지 + 버튼 전체 배경 변경
+  ======================================================= */
+
+  body[data-project-page]
+  > .project-tools
+  .project-tool:hover,
+  body[data-project-page]
+  > .project-tools
+  .project-tool:focus-visible,
+  body[data-project-page]
+  > .project-tools
+  .project-tool:active {
+    background-color: #ffffff17;
+    color: #f3b5c9;
+
+    transform: none;
+  }
+
+  /*
+   * 01, 02 숫자도 호버 시 동일한 색상 적용
+   */
+  body[data-project-page]
+  > .project-tools
+  .project-tool--project:hover
+  .project-tool__index,
+  body[data-project-page]
+  > .project-tools
+  .project-tool--project:focus-visible
+  .project-tool__index,
+  body[data-project-page]
+  > .project-tools
+  .project-tool--project:active
+  .project-tool__index {
+    color: #f3b5c9;
+  }
+
+  /*
+   * 키보드 포커스
+   * 별도 outline으로 선을 덮지 않도록 설정
+   */
+  body[data-project-page]
+  > .project-tools
+  .project-tool:focus-visible {
+    outline: none;
   }
 }
