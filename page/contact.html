@@ -78,20 +78,38 @@
         toast = document.createElement("div");
         toast.id = "copy-toast";
         toast.style.cssText = `
-      position:fixed;
-      left:50%;
-      bottom:40px;
-      transform:translateX(-50%);
-      background:#111;
-      color:#fff;
-      padding:14px 22px;
-      border-radius:999px;
-      font-size:14px;
-      opacity:0;
-      transition:opacity .25s ease;
-      z-index:9999;
-      pointer-events:none;
-    `;
+
+  position: fixed;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background-color: #ffffff17;
+
+backdrop-filter: blur(6px);
+
+  color: #F3B5C9;
+
+  padding: 16px 24px;
+
+
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+  font-size: 14px;
+
+  opacity: 0;
+
+  transition: opacity .25s ease;
+
+  z-index: 9999;
+
+  pointer-events: none;
+
+`;
         document.body.appendChild(toast);
       }
 
